@@ -8,6 +8,9 @@ namespace C_Sharp
 {
     internal class _53MaximumSubarray
     {
+        // TODO:
+        // Improve time efficiency.
+
         public static int MaxSubArray(int[] nums)
         {
             int first = int.MinValue;

@@ -8,6 +8,9 @@ namespace C_Sharp
 {
     internal class _2103RingsAndRods
     {
+        // TODO:
+        // See if there is room for improvement.
+
         public static Dictionary<int, HashSet<char>> dict = new Dictionary<int, HashSet<char>>();
 
         public static int CountPoints(string rings)
