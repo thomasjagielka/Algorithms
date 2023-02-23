@@ -6,7 +6,7 @@
         {
             foreach (object el in list)
             {
-                if (el is string || el is int)
+                if (el is string || el is int || el is bool)
                     Console.WriteLine(el);
 
                 if (el is int[])
@@ -18,8 +18,8 @@
         static void Main()
         {
             Output(
-                _1TwoSum.TwoSum(new int[] { 2, 7, 11, 15 }, 9)
-            );
+                 _724FindPivotIndex.PivotIndex(new int[] { 1, 7, 3, 6, 5, 6 })
+            ); ;
         }
     }
 }

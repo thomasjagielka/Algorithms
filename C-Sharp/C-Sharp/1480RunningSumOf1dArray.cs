@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_Sharp
 {
-    internal class _480RunningSumOf1dArray
+    internal class _1480RunningSumOf1dArray
     {
         public static int[] RunningSum(int[] nums)
         {
