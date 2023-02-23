@@ -9,27 +9,34 @@ namespace C_Sharp
     internal class _53MaximumSubarray
     {
         // TODO:
+        // Fix Time Limit Exceeded.
         // Improve time efficiency.
 
         public static int MaxSubArray(int[] nums)
         {
-            int first = int.MinValue;
-            int second = int.MinValue;
+            List<int> biggestSumSubarray = new List<int>{ int.MinValue };
 
-            foreach (int num in nums)
+            for (int i = 0; i < nums.Length; i++) 
             {
-                if (num > first && num > second)
-                {
-                    if (num > second)
-                        second = first;
+                int sum = 0;
 
-                    first = num;
+                for (int j = i; j < nums.Length; j++)
+                {
+                    sum += nums[j];
+
+                    if (biggestSumSubarray.Sum() < sum)
+                    {
+                        biggestSumSubarray = new List<int>();
+
+                        for (int k = i; k <= j; k++)
+                        {
+                            biggestSumSubarray.Add(nums[k]);
+                        }
+                    }
                 }
-                else if (num > second)
-                    second = num;
             }
 
-            return first + second;
+            return biggestSumSubarray.Sum();
         }
     }
 }
