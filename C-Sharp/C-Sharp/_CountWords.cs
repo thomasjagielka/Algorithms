@@ -21,7 +21,7 @@ namespace C_Sharp
             {
                 if (IsLatinLetter(input[i]) && i == 0)
                     counter++;
-                else if (IsLatinLetter(input[i]) && !IsLatinLetter(input[i + 1]))
+                else if (!IsLatinLetter(input[i]) && IsLatinLetter(input[i + 1]))
                     counter++;
             }
 
